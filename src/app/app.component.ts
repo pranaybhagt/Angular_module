@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-Module-Practice1';
+   
+  subject = new Subject();
+  ngOnInit(){
+
+    this.subject.next(10);
+    this.subject.next(20);
+
+    this.subject.subscribe((data:any)=>{
+      console.log("Data Received",data);
+      
+    })
+  }
 }
