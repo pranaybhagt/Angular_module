@@ -8,6 +8,7 @@ import { Subject } from 'rxjs';
 })
 export class AppComponent {
   title = 'Angular-Module-Practice1';
+  msg:string="pranay";
    
   subject = new Subject();
   ngOnInit(){
